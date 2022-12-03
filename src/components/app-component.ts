@@ -1,4 +1,4 @@
-import { html, render } from "lit-html"
+/*import { html, render } from "lit-html"
 
 import "./user"
 import { USER_SELECTED_EVENT } from "./user"
@@ -30,4 +30,4 @@ class AppComponent extends HTMLElement {
         })
     }
 }
-customElements.define("app-component", AppComponent)
+customElements.define("app-component", AppComponent)*/
