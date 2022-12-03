@@ -1,4 +1,4 @@
-import produce from "immer"
+/*import produce from "immer"
 import store from "./model/store"
 
 const USER_URL = "https://jsonplaceholder.typicode.com/users"
@@ -15,4 +15,4 @@ class UserService {
 }
 
 const userService = new UserService()
-export default userService
+export default userService*/
