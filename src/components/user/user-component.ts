@@ -1,4 +1,4 @@
-import { html, render } from "lit-html"
+/*import { html, render } from "lit-html"
 
 const template = html`
     <div>User: Max Mustermann</div>
@@ -18,4 +18,4 @@ class UserComponent extends HTMLElement{
     }
 }
 
-customElements.define("user-component", UserComponent)
+customElements.define("user-component", UserComponent)*/
