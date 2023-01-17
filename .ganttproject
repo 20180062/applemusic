@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><ganttproject-options version="2.8.9">
+    <colors resources="#8cb6ce" resourcesOverload="#e53232" resourcesUnderload="#32e532" weekEnd="#808080" daysOff="#e6ff2b"/>
+    <geometry x="-204" y="144" width="1926" height="778" maximized="false"/>
+    <toolBar position="0" icon-size="16" show="0"/>
+    <statusBar show="true"/>
+    <export name="true" complete="true" border3d="false" relations="true"/>
+    <csv-export>
+        <csv-general fixed="false" separatedChar="," separatedTextChar="&quot;"/>
+    </csv-export>
+    <view id="csv-export">
+        <field id="tpd10"/>
+        <field id="tpd3"/>
+        <field id="tpd4"/>
+        <field id="tpd5"/>
+        <field id="tpd6"/>
+        <field id="tpd7"/>
+        <field id="tpd12"/>
+        <field id="tpd8"/>
+        <field id="tpd9"/>
+        <field id="tpd11"/>
+        <field id="tpd13"/>
+        <field id="tpd14"/>
+        <field id="webLink"/>
+        <field id="notes"/>
+        <resources>
+            <field id="id"/>
+            <field id="0"/>
+            <field id="1"/>
+            <field id="2"/>
+            <field id="3"/>
+            <field id="4"/>
+            <field id="5"/>
+        </resources>
+    </view>
+    <automatic-launch value="false"/>
+    <lockdavminutes value="240"/>
+    <xsl-dir dir="file:/C:/Program Files (x86)/GanttProject-2.8/plugins-2.8.9/ganttproject/data/resources/xslt"/>
+    <xsl-fo file="file:/C:/Program Files (x86)/GanttProject-2.8/plugins-2.8.9/ganttproject/data/resources/xslfo/ganttproject.xsl"/>
+    <working-dir dir="C:\Users\Startklar"/>
+    <files>
+        <file path="C:\Users\Startklar\Documents\_SCHULE\Systemplanung und Projektentwicklung\VirtualCloset\Zeitplan.gan"/>
+        <file path="C:\Users\Startklar\Downloads\Netzstrukturplan (5).gan"/>
+        <file path="C:\Users\Startklar\Downloads\Netzstrukturplan.gan"/>
+        <file path="C:\Users\Startklar\Documents\_SCHULE\Systemplanung und Projektentwicklung\Knasmüller_MPMNetzplan.gan"/>
+    </files>
+    <roles roleset-name="Default">
+        <role id="0" name="Nicht definiert"/>
+        <role id="1" name="Projekt Manager"/>
+    </roles>
+    <roles roleset-name="SoftwareDevelopment">
+        <role id="2" name="Entwickler"/>
+        <role id="3" name="Handbuchersteller"/>
+        <role id="4" name="Tester"/>
+        <role id="5" name="Graphikdesigner"/>
+        <role id="6" name="Übersetzer"/>
+        <role id="7" name="Packager (.rpm, .tgz ...)"/>
+        <role id="8" name="Analytiker"/>
+        <role id="9" name="Web Designer"/>
+        <role id="10" name="keine bestimmte Rolle"/>
+    </roles>
+    <option id="ui.laf" value="Plastic"/>
+    <option id="ui.chartFontSpec" value="Dialog-NORMAL"/>
+    <option id="ui.screenDpi" value="96"/>
+    <option id="ui.language" value="de"/>
+    <option id="ui.ui.dateFormat.switch" value="true"/>
+    <option id="ui.ui.dateFormat.short" value="dd.MM.yy"/>
+    <option id="ui.ui.dateFormat.sample" value="28.12.20"/>
+    <option id="rss.rss.checkUpdates" value="true"/>
+    <option id="ganttChartDefaults.taskNamePrefix" value="Vorgang"/>
+    <option id="ganttChartDefaults.taskCopyNamePrefix" value="{0}_{1}"/>
+    <option id="ganttChartDefaults.taskDefaultColor" value="#8cb6ce"/>
+    <option id="ganttChartDefaults.dependencyDefaultHardness" value="Strong"/>
+    <option id="ganttChartGridDetails.showTodayLine" value="false"/>
+    <option id="ganttChartGridDetails.showProjectDates" value="false"/>
+    <option id="ganttChartGridDetails.chart.styles"><![CDATA[
+
+]]></option>
+    <option id="timelineLabels.timeline.showMilestones" value="true"/>
+    <option id="resourceChartColors.resourceChartColors.normalLoad" value="#8cb6ce"/>
+    <option id="resourceChartColors.resourceChartColors.overLoad" value="#e53232"/>
+    <option id="resourceChartColors.resourceChartColors.underLoad" value="#32e532"/>
+    <option id="resourceChartColors.resourceChartColors.dayOff" value="#e6ff2b"/>
+    <option id=".working-dir" value="C:\Users\Startklar\Documents\_SCHULE\Systemplanung und Projektentwicklung\VirtualCloset"/>
+    <option id=".last-webdav-document" value=""/>
+    <option id=".webdav.lockTimeout" value="-1"/>
+    <option id="webdav.servers"><![CDATA[
+	http://	null]]></option>
+    <option id="webdav.lockRelease" value="true"/>
+    <option id="webdav.proxy" value=""/>
+    <option id="updateRss.check" value="YES"/>
+    <option id="updateRss.lastCheck" value="2021-01-03"/>
+    <configuration/>
+    <instance/>
+</ganttproject-options>
