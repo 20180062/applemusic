@@ -15,10 +15,15 @@ const tableTemplate = html`
         <tbody></tbody>
     </table>
 `
-//Zeile 47
-const rowTemplate = (collection: Collection) => html`
+
+const rowTemplateCollection = (collection: Collection) => html`
+    <td>${collection.artistName}</td><td>${collection.collectionName}</td>
+`
+const rowTemplateTrack = (collection: Collection) => html`
     <td>${collection.artistName}</td><td>${collection.trackName}</td>
 `
+
+
 class UserTableComponent extends HTMLElement {
     constructor() {
         super()
@@ -28,7 +33,7 @@ class UserTableComponent extends HTMLElement {
         console.log("connected usertable")
         store.pipe( //wird automatisch aufgerufen wenn store.next() in "collection-service.ts" ausgeführt wird
                 map(model => model.results), 
-                distinctUntilChanged() //haben sich results im draft geändert (sprich wurde nach etwas anderem gesucht)
+                //distinctUntilChanged() //haben sich results im draft geändert (sprich wurde nach etwas anderem gesucht)
             ).subscribe(collections => {//falls sich die results geändert haben wird render() aufgerufen
                 this.render(collections) //und es werden die neuen results in die Tabelle eingefügt
             })
@@ -43,11 +48,19 @@ class UserTableComponent extends HTMLElement {
         collections.forEach(collection => {
             const row = tbody.insertRow() //fügt eine neue leere Zeile in den tbody (also die Tabelle) ein
             //hierdurch merkt das Programm, wenn man auf eine Zeile klickt
-            row.onclick = () => {
-                console.log("clicked on " + collection.trackName);
-            };
+            if (collection.trackName == null) {
+                row.onclick = () => {
+                    console.log("clicked on " + collection.collectionName);
+                };
+                render(rowTemplateCollection(collection), row) //befüllt die eingefügte Zeile "row" mit den Werten eines Eintrags
 
-            render(rowTemplate(collection), row) //befüllt die eingefügte Zeile "row" mit den Werten eines Eintrags
+            } else {
+                row.onclick = () => {
+                    console.log("clicked on " + collection.trackName);
+                };
+                render(rowTemplateTrack(collection), row)
+            }
+            
         });
     }
 }

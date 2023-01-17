@@ -5,13 +5,13 @@ import "./song/collection-table-component";
 
 //für den Nutzer sehbare Felder - View
 const template = html`
-    <!--<input type="radio" id="album" name="entity" value="album">
+    <input type="radio" id="album" name="entity" value="album">
     <label for="css">Album</label>
     <input type="radio" id="song" name="entity" value="song">
-    <label for="css">Song</label><br>-->
+    <label for="css">Song</label><br>
 
     <label for="collection">Search:</label>
-    <input type="text" id="eingabe">
+    <input type="text" id="userinput">
 
     <button value="Enter">Submit</button>
     <br><br>
@@ -27,10 +27,19 @@ class AppComponent extends HTMLElement {
     connectedCallback() {
         console.log("app component connected")
         render(template, this.shadowRoot)
-        const input = this.shadowRoot.querySelector<HTMLInputElement>("input"); //Texteingabe des Users
+        const input = <HTMLInputElement>this.shadowRoot.getElementById("userinput"); //Texteingabe des Users
         const button = this.shadowRoot.querySelector<HTMLButtonElement>("button"); //Submit-Button
+
         button.onclick = () => {
-            collectionService.search(input.value,"song");
+            const album = <HTMLInputElement>this.shadowRoot.getElementById("album");
+            const song = <HTMLInputElement>this.shadowRoot.getElementById("song");
+            let entity = "";
+            if (album.checked) {
+                entity = album.value
+            } else if (song.checked) {
+                entity = song.value
+            }
+            collectionService.search(input.value,entity);
         };
     }
 }
