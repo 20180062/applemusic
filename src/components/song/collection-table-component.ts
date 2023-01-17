@@ -37,6 +37,9 @@ class UserTableComponent extends HTMLElement {
         render(tableTemplate, this.shadowRoot)
 
         const tbody = this.shadowRoot.querySelector("tbody")
+
+        tbody.innerHTML = ""; //resettet die Anzeige der Suchergebnisse
+
         collections.forEach(collection => {
             const row = tbody.insertRow() //fügt eine neue leere Zeile in den tbody (also die Tabelle) ein
             //hierdurch merkt das Programm, wenn man auf eine Zeile klickt
