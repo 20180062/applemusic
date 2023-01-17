@@ -4,7 +4,7 @@ import store from "./model/store";
 class CollectionService {
     async search(name: String, entity: String) {
         const response = await fetch('https://itunes.apple.com/search?term=' + name + '&entity=' + entity);
-        const searchResult = await response.json(); //parst die JSON-Datei, wenn ich das richtig verstanden hab
+        const searchResult = await response.json(); //parst die JSON-Datei
         let nextState = produce(store.getValue(), draft => {
             draft.results = searchResult.results;
         })

@@ -33,7 +33,7 @@ class UserTableComponent extends HTMLElement {
         console.log("connected usertable")
         store.pipe( //wird automatisch aufgerufen wenn store.next() in "collection-service.ts" ausgeführt wird
                 map(model => model.results), 
-                //distinctUntilChanged() //haben sich results im draft geändert (sprich wurde nach etwas anderem gesucht)
+                distinctUntilChanged() //haben sich results im draft geändert (sprich wurde nach etwas anderem gesucht)
             ).subscribe(collections => {//falls sich die results geändert haben wird render() aufgerufen
                 this.render(collections) //und es werden die neuen results in die Tabelle eingefügt
             })

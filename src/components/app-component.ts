@@ -28,7 +28,7 @@ class AppComponent extends HTMLElement {
         console.log("app component connected")
         render(template, this.shadowRoot)
         const input = <HTMLInputElement>this.shadowRoot.getElementById("userinput"); //Texteingabe des Users
-        const button = this.shadowRoot.querySelector<HTMLButtonElement>("button"); //Submit-Button
+        const button = <HTMLButtonElement>this.shadowRoot.querySelector("button"); //Submit-Button
 
         button.onclick = () => {
             const album = <HTMLInputElement>this.shadowRoot.getElementById("album");
