@@ -17,7 +17,7 @@ const tableTemplate = html`
 `
 //Zeile 47
 const rowTemplate = (collection: Collection) => html`
-    <td>${collection.artistName}</td><td>${collection.collectionName}</td>
+    <td>${collection.artistName}</td><td>${collection.trackName}</td>
 `
 class UserTableComponent extends HTMLElement {
     constructor() {
@@ -44,7 +44,7 @@ class UserTableComponent extends HTMLElement {
             const row = tbody.insertRow() //fügt eine neue leere Zeile in den tbody (also die Tabelle) ein
             //hierdurch merkt das Programm, wenn man auf eine Zeile klickt
             row.onclick = () => {
-                console.log("clicked on " + collection.collectionName);
+                console.log("clicked on " + collection.trackName);
             };
 
             render(rowTemplate(collection), row) //befüllt die eingefügte Zeile "row" mit den Werten eines Eintrags
